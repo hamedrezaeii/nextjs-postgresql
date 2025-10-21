@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    serverActions: true,
+  },
+  output: "standalone", // مهم برای Serverless با DB
 };
 
-export default nextConfig;
+module.exports = nextConfig;
